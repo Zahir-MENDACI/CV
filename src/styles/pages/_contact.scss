@@ -1,0 +1,96 @@
+.contactContent {
+  background: #1f789c;
+  border-radius: $borderRadius;
+  width: 100%;
+  min-height: 88vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 45% 35%;
+  grid-template-areas: 
+    "1"
+    "2"
+    "3";
+
+    
+
+  
+  .contactBox {
+    grid-area: 2;
+    background: $color-5;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    z-index: 2;
+    border-radius: $borderRadius;
+    box-shadow: 0 3px 10px #333;
+    width: 80%;
+    height: 60vh;
+
+    h1 {
+      text-align: center;
+      margin-top: 0.3rem;
+      position: relative;
+      color: $color-2;
+
+      &:after {
+        content: '';
+        height: 1px;
+        width: 50%;
+        background: $color-1;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .icone
+    {
+      width: 40px;
+      height: 40px;
+    }
+    ul {
+      height: 72%;
+      width: inherit;
+      display: grid;
+      margin-top: 3.5rem;
+
+      li {
+        position: relative;
+      }
+
+      span {
+        font-size: 1.4rem;
+        position: absolute;
+        transform: translateX(52px);
+        background: transparent;
+        border: none;
+
+        transition: .2s ease;
+      }
+      .clickInput:hover {
+        transform: translateX(56px);
+        cursor: pointer;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width: 500px){
+  .contactContent {
+    .contactBox {
+      min-width: 100% !important;
+      padding: 1rem 1.5rem;
+      .icone
+      {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    span {
+      font-size: .9rem !important;
+    }
+    h4 {
+      font-size: .9rem;
+    }
+  }
+}

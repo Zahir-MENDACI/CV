@@ -1,0 +1,79 @@
+.home {
+
+  .homeContent {
+    background: #1f789c;
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 88vh;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      // background: url('../../media/bigGates.jpg') no-repeat center/cover;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 5rem;
+        font-family: $font-2;
+        color: #000;
+        
+      }
+      h2 {
+        font-size: 1.5rem;
+        
+        color: rgb(37, 37, 37);
+      }
+      h3 {
+        font-size: 1rem;
+
+        color: rgb(37, 37, 37);
+      }
+      .pdf {
+        margin-top: 50px;
+        
+        a {
+          font-size: 1.5rem;
+          background: rgb(31, 55, 66);
+          color: rgb(194, 194, 194);
+          padding: 1rem 2rem;
+          border-radius: 10px;
+        }
+        &:hover {
+          transform: scale(1.1);
+          transition: ease .5s;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px){
+  .homeContent {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width:580px){
+  .homeContent {
+    &:after {
+    // background: url('../../media/bigGates.jpg') no-repeat 60% 50%/cover !important;
+    }
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+  }
+}
